@@ -1,10 +1,10 @@
 import requests
 from twilio.rest import Client
 
+twilio_sid = "Your twilio sid"
+twilio_token = "Your twilio token"
 
-twilio_sid = "AC82683833d2f3c8895ac4f0f9ecec0e67"
-twilio_token = "3aca2164159169803d8c6811dc350214"
-api_key = "890196f23a4247c9a17135937223008"
+
 url_token = "http://api.weatherapi.com/v1/current.json?"
 forecast_token = "http://api.weatherapi.com/v1/forecast.json?"
 
@@ -46,7 +46,7 @@ else:
     message = client.messages \
         .create(
         body="no rain today",
-        from_='+12184007318',
-        to='+2348182958087'
+        from_='Your twilio number',
+        to='Your personal number'
     )
     print(message.status)
